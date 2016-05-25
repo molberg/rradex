@@ -1,0 +1,5 @@
+src/*.o
+src/*.so
+src/symbols.rds
+rradex.Rproj
+.Rproj.user/

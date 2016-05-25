@@ -1,0 +1,19 @@
+Package: rradex
+Type: Package
+Title: R interface to the RADEX code
+Version: 1.3
+Date: 2016-05-25
+Author: Michael Olberg <michael.olberg@chalmers.se>
+Maintainer: Michael Olberg <michael.olberg@chalmers.se>
+Description: This is the R-interface to RADEX, a statistical equilibrium
+    radiative transfer code, made available for public use as part of the
+    Leiden Atomic and Molecular Database (LAMDA). RADEX is a one-dimensional
+    non-LTE radiative transfer code, that uses the escape probability
+    formulation assuming an isothermal and homogeneous medium without
+    large-scale velocity fields. RADEX is comparable to the LVG method and
+    provides a useful tool in rapidly analyzing a large set of observational
+    data providing constraints on physical conditions, such as density and
+    kinetic temperature.
+    The formalism adopted in RADEX is summarized in Van der Tak, F.F.S. et al.
+    2007, A&A 468, 627.
+License: GPL (>= 2)

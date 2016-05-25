@@ -1,0 +1,8 @@
+PKG_LIBS = $(BLAS_LIBS) $(FLIBS) $(LAPACK_LIBS)
+
+OBJECTS = rradex.o readdata.o matrix.o background.o
+
+all: $(SHLIB)
+
+clean:
+	rm -f *~ *.o

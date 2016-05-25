@@ -1,0 +1,3 @@
+useDynLib(rradex, rdxinput, rdxdensity, rdxoutput,
+          rdxrun, rdxmoldata, rdxdefaults, readdata)
+export(radex, loaddata)
