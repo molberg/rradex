@@ -1,5 +1,7 @@
-#' Perform RADEX calculation
+#' Run the RADEX radtiative transfer code for given input parameters
+#' and return RADEX output as a data.frame.
 #'
+#' @keywords radiative transfer
 #' @param molfile filename of molecular data file, including full path
 #' @param freqs output frequency range in GHz, e.g c(50,500)
 #' @param Tkin kinetic temperature, default 30 K

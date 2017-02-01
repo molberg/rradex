@@ -17,3 +17,4 @@ Description: This is the R-interface to RADEX, a statistical equilibrium
     The formalism adopted in RADEX is summarized in Van der Tak, F.F.S. et al.
     2007, A&A 468, 627.
 License: GPL (>= 2)
+RoxygenNote: 5.0.1
