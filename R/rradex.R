@@ -1,0 +1,50 @@
+#' A package for performing radiative transfer calculations.
+#'
+#' This is an R-interface to
+#' [RADEX](http://home.strw.leidenuniv.nl/~moldata/radex.html), a
+#' statistical equilibrium radiative transfer code, made available for
+#' public use as part of the Leiden Atomic and Molecular Database
+#' (LAMDA). RADEX is a one-dimensional non-LTE radiative transfer code,
+#' that uses the escape probability formulation assuming an isothermal and
+#' homogeneous medium without large-scale velocity fields. RADEX is
+#' comparable to the LVG method and provides a useful tool in rapidly
+#' analyzing a large set of observational data providing constraints on
+#' physical conditions, such as density and kinetic temperature.
+#' 
+#' The formalism adopted in RADEX is summarized in Van der Tak, F.F.S. et
+#' al.  2007, A&A 468, 627.
+#' 
+#' Here is an example of what a short session may look like. Note,
+#' that the various columns of the results table will be immediately
+#' available as vectors in R for further calculations, plotting, etc:
+#' @examples
+#' library(rradex)
+#' \dontrun{
+#' GHz <- 1.0e9
+#' MHz <- 1.0e6
+#' au <- 1.4959787e+11  # astronomical unit in m
+#' pc <- 3.0856776e+16  # parsec in m
+#' molfile <- "/path/to/co.dat"
+#' Tkin <- 10.0
+#' Tbg <- 2.73
+#' d <- 3000*au
+#' f.CO <- 8.0e-5
+#' nH2 <- 3.0e3
+#' Ncol <- nH2*d*100*f.CO
+#' f <- 115.0*GHz
+#' dv <- 1.0
+#' df <- f*dv/299792.46/MHz
+#' 
+#' l = list(partner="H2", density=nH2)
+#' result <- radex(molfile, freqs=c(100,500), Tkin=Tkin, Ncol=Ncol, collisions=l)
+#' print(result)
+#' plot(result$GHz, result$T.R, xlim=c(100,500), type='h', col='blue', lwd=2,
+#'      xlab="frequency [GHz]", ylab=expression(T[R]))
+#' }
+#'
+#' @docType package
+#' @name rradex-package
+#' @author Michael Olberg, \email{michael.olberg@@chalmers.se}
+NULL
+
+## NULL
