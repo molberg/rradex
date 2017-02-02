@@ -27,3 +27,9 @@ vectors in R for further calculations, plotting, etc:
     result <- radex("hco+.dat", freqs=c(50,500), collisions=l)
     print(result)
 ```
+
+To install, simply clone this repository and then in its parent directory
+
+```
+   R CMD INSTALL rradex
+```
