@@ -12,7 +12,8 @@ analyzing a large set of observational data providing constraints on
 physical conditions, such as density and kinetic temperature.
 
 The formalism adopted in RADEX is summarized in Van der Tak, F.F.S. et
-al.  2007, A&A 468, 627.
+al. 2007, A&A 468, 627. The formalism is also explained in the
+[RADEX manual](http://www.strw.leidenuniv.nl/~moldata/radex_manual.pdf).
 
 Here is an example of what a short session may look like. Note, that the
 various columns of the results table will be immediately available as
@@ -20,7 +21,7 @@ vectors in R for further calculations, plotting, etc:
 
 ``` r
     library(rradex)
-    # 
+    #
     # set up collision data
     l = list(partner=c("H2","e","He"), density=c(1.0e5,1.0e4,3.0e3))
     # perform calculation, use defaults for Tkin, Tbg, Ncol
@@ -28,7 +29,24 @@ vectors in R for further calculations, plotting, etc:
     print(result)
 ```
 
-To install, simply clone this repository and then in its parent directory
+First make sure that you have all the dependencies to build the
+package. After having cloned the repository execute the following
+command in its parent directory:
+
+```
+    R CMD check rradex
+```
+This may produce errors due to missing algebra libraries which `rradex` is using
+to solve the linear equations. E.g. on Linux typically a
+
+```
+sudo apt-get install libblas-dev liblapack-dev
+```
+or similar might be needed. This step will produce a subdirectory `rradex.Rcheck`
+which will contain a manual for the `rradex` package in pdf format, once the above
+step succeeds.
+
+Then to install, simply clone this repository and then in its parent directory
 
 ```
    R CMD INSTALL rradex
