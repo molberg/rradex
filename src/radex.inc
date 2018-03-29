@@ -16,12 +16,11 @@ c to our paper: A&A 468, 627 (2007).
 c
 c     ---------------------------------------------------------
 c     
-c     Customization section: user provides location of molecular data
-C     files ("radat") and escape probability formula ("method")
+c     Customization section:
+c     user provides escape probability formula ("method")
 
-      character*120 outfile,molfile,radat,specref,logfile
+      character*120 outfile,molfile,specref,logfile
       character*20 version
-      parameter(radat   = '/usr/share/radex/data/')
       parameter(version = '30nov2011')
 
 c     names of output file & data file & molecule

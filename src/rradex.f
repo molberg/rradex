@@ -8,11 +8,6 @@
 
       call rdxdefaults
       molfile = mol(1:length(mol))
-c      if ((molfile(1:1).ne.'/').and.(molfile(1:1).ne.'.')) then
-c         molfile = radat(1:length(radat))//molfile(1:length(molfile))
-c      else
-c         molfile = molfile(1:length(molfile))
-c      endif
       fmin = f(1)
       fmax = f(2)
       tkin = tk
