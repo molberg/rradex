@@ -37,4 +37,3 @@ and return RADEX output as a data.frame.
 }
 \keyword{radiative}
 \keyword{transfer}
-

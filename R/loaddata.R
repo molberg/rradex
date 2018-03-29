@@ -1,3 +1,19 @@
+#' Load a molecular data file from the Leiden Atomic and Molecular
+#' Database (LAMDA) database for easy inspection of levels and
+#' transitions.
+#'
+#' @keywords radiative transfer
+#' @param molfile filename of molecular data file, including full path
+#' @return a list with components "molecule" (molecule name), "amass"
+#'     (molecular mass in a.m.u.), "levels" (energy levels),
+#'     "transitions" (radiative transitions) and "collisions"
+#'     (collision rates)
+#' @examples
+#' library(rradex)
+#' \dontrun{
+#' result <- loaddata("data/hco+.dat")
+#' print(result)
+#' }
 loaddata <- function(molfile) {
     lines <- readLines(molfile, n=-1)
     comments <- grep("!", lines)
@@ -63,12 +79,11 @@ loaddata <- function(molfile) {
 
         collisions[[ipart]] <- list(partner=partner, T=temperatures, rates=rates)
         ## names(collisions)[ipart] <- partner
-        
+
         current <- current+ncoll
     }
-    
+
     moldata <- list(molecule=molecule, amass=amass,
                     levels=levels, transitions=transitions, collisions=collisions)
     moldata
 }
-
